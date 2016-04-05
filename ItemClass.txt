@@ -1,0 +1,45 @@
+type of item with corresponding number
+0 - rags
+1 - sword
+2 - shield
+3 - armor
+4 - helmet
+5 - gauntlet
+6 - boots
+7 - potion (health)
+8 - no sword
+9 - no shield
+10 - no armor
+11 - no helmet
+12 - bare hands
+13 - bare feet
+
+id of item with corresponding number
+0 - rags
+1 - basic sword
+2 - basic shield
+3 - basic armor
+4 - basic helmet
+5 - basic gauntlet
+6 - basic boots
+7 - potion (health)
+8 - no sword
+9 - no shield
+10 - no armor
+11 - no helmet
+12 - bare hands
+13 - bare feet
+14 - iron sword
+15 - iron shield
+16 - iron armor
+17 - iron helmet
+18 - iron gauntlet
+19 - iron boots
+20 - advanced hPotion
+21 - steel sword
+22 - steel shield
+23 - steel armor
+24 - steel helmet
+25 - steel gauntlet
+26 - steel boots
+27 - expert hPotion
