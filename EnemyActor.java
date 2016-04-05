@@ -1,5 +1,3 @@
-package ver0;
-
 public class EnemyActor extends Actor
 {
 	//member variables
@@ -7,7 +5,7 @@ public class EnemyActor extends Actor
 	private int m_defeatGold;//This is the gold provided to the player character upon defeat
 
 	//static int m_numOfEnemies;//This is the total number of enemies
-	
+
 
 	static int m_numOfEnemies=4;//This is the total number of enemies
 
@@ -20,7 +18,7 @@ public class EnemyActor extends Actor
 		}
 		return enemies;
 	}
-	
+
 	//Constructor
 	public EnemyActor(int index)
 	{
@@ -62,7 +60,7 @@ public class EnemyActor extends Actor
 			setDef(8);
 
 			m_skillSet[0]=true;
-			
+
 			m_defeatGold=10;
 		}
 		else if(index==1)
@@ -73,10 +71,10 @@ public class EnemyActor extends Actor
 			setCurHp(getMaxHp());
 			setAtk(12);
 			setDef(6);
-			
+
 			m_skillSet[0]=true;
 			m_skillSet[1]=true;
-			
+
 			m_defeatGold=15;
 		}
 		else if(index==2)
@@ -87,10 +85,10 @@ public class EnemyActor extends Actor
 			setCurHp(getMaxHp());
 			setAtk(11);
 			setDef(9);
-			
+
 			m_skillSet[0]=true;
 			m_skillSet[3]=true;
-			
+
 			m_defeatGold=20;
 		}
 		else if(index==3)
@@ -101,10 +99,10 @@ public class EnemyActor extends Actor
 			setCurHp(getMaxHp());
 			setAtk(8);
 			setDef(14);
-			 
+
 			m_skillSet[0]=true;
 			m_skillSet[3]=true;
-			
+
 			m_defeatGold=30;
 		}
 		else if(index==4)
@@ -115,10 +113,10 @@ public class EnemyActor extends Actor
 			setCurHp(getMaxHp());
 			setAtk(15);
 			setDef(5);
-			
+
 			m_skillSet[0]=true;
 			m_skillSet[1]=true;
-			
+
 			m_defeatGold=40;
 		}
 	}

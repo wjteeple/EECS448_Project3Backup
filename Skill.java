@@ -1,6 +1,4 @@
-package ver0;
-
-public class Skill 
+public class Skill
 {
 	//Member Variables
 	private String m_name;
@@ -14,7 +12,7 @@ public class Skill
 	//static int m_numOfSkills=9;
 
 
-	
+
 	public static int getNumOfSkillsTotal()
 	{
 		return m_numOfSkills;
@@ -97,7 +95,7 @@ public class Skill
 		}
 		m_id=skillNum;
 	}
-	
+
 	public void Execute(Actor User, Actor Target)
 	{
 		//TODO incorporate accuracy into calculation using random
@@ -144,7 +142,7 @@ public class Skill
 			{
 				User.setCurHp(User.getMaxHp());
 			}
-			else 
+			else
 			{
 				User.setCurHp((int)(User.getCurHp()+User.getAttackFighter()*.5));
 			}
@@ -170,9 +168,9 @@ public class Skill
 			}
 		}
 	}
-	
-	
-	
+
+
+
 	//Getters and Setters
 	public String getName()
 	{

@@ -9,7 +9,8 @@ import java.io.*;
 
 public class WorldDriver
 {
-  public static void main(String[] args) {
+  public static void main(String[] args)
+  {
     //file names
     String worldMapFile = "worldLayout.txt";
     String villagevilleFile = "villageville.txt";

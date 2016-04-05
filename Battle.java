@@ -1,24 +1,24 @@
 /*@name: Battle.java
  *@date: 4/2/16
  *@brief: Contains methods for battle events throughout the game
- * 
+ *
  */
-package ver0;
+ 
 import java.util.Random;
 import java.util.Scanner;
-public class Battle 
+public class Battle
 {
 	//member variables
 	private Random r;
 	private Scanner myScanner;
 	private int order;
-	private int skillChoice; 
+	private int skillChoice;
 	private Actor victor;
 	private int choice;
 	private boolean ranAway;
 	private Skill[] m_skillSet;
 	private Item[] m_itemSet;
-	
+
 	public Battle()
 	{
 		myScanner=new Scanner(System.in);
@@ -30,17 +30,17 @@ public class Battle
 		m_skillSet=Skill.getSkills();
 		m_itemSet=Item.getAllItems();
 	}
-	
+
 	public boolean actorBattle(PlayerActor player, EnemyActor npc)
 	{
 		int order=0; //randomNumber(0,1);
 		System.out.println("Starting battle between "+player.getName()+" and "+npc.getName());
 		//for testing purposes, the user will go first until method works correctly
-		
+
 		if (order==0)
 		{
 			System.out.println("By random selection, "+player.getName()+" will go first\n");
-			
+
 			do
 			{
 				System.out.println("Current HP-> "+player.getName()+": "+player.getCurHp()+", "+npc.getName()+": "+npc.getCurHp());
@@ -53,7 +53,7 @@ public class Battle
 				{
 					System.out.println("You gave invalid input! please try again");
 				}
-				
+
 				if (choice==1)
 				{
 					int temphp1=npc.getCurHp();
@@ -96,7 +96,7 @@ public class Battle
 					{
 						System.out.println("You entered a number too high!");
 					}
-				
+
 				}
 				else if (choice==3)
 				{
@@ -104,7 +104,7 @@ public class Battle
 					printPotionsAvailable(player);
 					//if potions available, ask user for choice
 					//else continue keyword
-		
+
 				}
 				else if (choice==4)
 				{
@@ -119,12 +119,12 @@ public class Battle
 						System.out.println("You were unable to run away, coward!");
 					}
 				}
-				
+
 				npcTurn(npc);
-				
+
 			}while(!isBattleOver(player,npc));
 		}
-		
+
 		else
 		{
 			System.out.println("By random selection, "+npc.getName()+" will go first");
@@ -134,7 +134,7 @@ public class Battle
 				break;
 			}
 		}
-		
+
 		if (ranAway)
 		{
 			System.out.println("You successfully ran away!");
@@ -142,20 +142,20 @@ public class Battle
 		return true;
 
 	}
-	
-	
+
+
 	public void npcTurn(Actor npc)
 	{
-		
+
 	}
-	
-	
+
+
 	public void groupBattle(Actor[] goodguys, Actor[] badguys)
 	{
 		//will be filled in later
 	}
-	
-	
+
+
 	private boolean isBattleOver(Actor a1, Actor a2)
 	{
 		if (a1.getCurHp()<=0 || a2.getCurHp()<=0)
@@ -169,8 +169,8 @@ public class Battle
 	{
 		return r.nextInt(max-min+1)+min;
 	}
-	
-	
+
+
 	private void printBattleMenu()
 	{
 		System.out.println("It is your turn, input a number to choose one of the following to do:");
@@ -183,7 +183,7 @@ public class Battle
 	{
 		System.out.println("Skills available to you:\n");
 		boolean[] skills=a1.getSkillset();
-		
+
 		for (int i=0; i<skills.length; i++)
 		{
 			if (skills[i]==true)
@@ -212,7 +212,7 @@ public class Battle
 		else
 		{
 			System.out.println("You currently don't have any potions");
-			
+
 		}
 		System.out.println("\n");
 	}

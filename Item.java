@@ -1,5 +1,3 @@
-package ver0;
-
 /**
  * This is a class for the items in the game.
  *
@@ -16,12 +14,12 @@ public class Item{
     private int m_bonusAtk;
     private int m_bonusHp;
     private int m_value;
-    
+
     private static int m_numTypesOfItem=28;
-    
+
     private String m_name;
     private boolean m_used;
-    
+
     /**
      * This function returns an array of all the items.
      * pre - none
@@ -58,11 +56,11 @@ public class Item{
         m_bonusAtk = 0;
         m_bonusHp = 0;
         m_value = 0;
-       
-        
+
+
         m_name = "";
         m_used = false;
-        
+
         if(typeOfItem == 0)
         {
             m_type = 0;
@@ -359,7 +357,7 @@ public class Item{
     {
         return m_limit;
     }
-    
+
     /**
      * This function returns the value of m_id
      * pre - none
@@ -370,7 +368,7 @@ public class Item{
     {
         return m_id;
     }
-    
+
     /**
      *This function returns the value of m_name
      * pre - none
@@ -427,7 +425,7 @@ public class Item{
     {
     	return m_bonusAtk;
     }
-    
+
     /**
      *This function returns the value of m_bonusHp
      * pre - none
@@ -449,7 +447,7 @@ public class Item{
     {
     	return m_numTypesOfItem;
     }
-    
+
     /**
      *This function sets the valus of m_used with a given value
      * pre - needs the parameters down below
@@ -461,7 +459,7 @@ public class Item{
     {
     	m_numTypesOfItem = numTypesItem;
     }
-    
+
     /**
      *This function returns the value of m_value
      * pre - none

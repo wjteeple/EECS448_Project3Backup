@@ -1,4 +1,3 @@
-package ver0;
 import java.util.Scanner;
 public class PlayerActor extends Actor
 {
@@ -9,7 +8,7 @@ public class PlayerActor extends Actor
 	private int m_exp;
 	private int m_gold;
 	private int[] m_inventory;
-	
+
 	//Constructor
 	public PlayerActor()
 	{
@@ -27,7 +26,7 @@ public class PlayerActor extends Actor
 		equipBoots(itemSet[13]);
 		equipGauntlets(itemSet[12]);
 	}
-	
+
 	//getters and setters TODO write JavaDocs for methods
 	public int getExp()
 	{
@@ -105,7 +104,7 @@ public class PlayerActor extends Actor
 	{
 		m_inventory=inventory;
 	}
-	
+
 	//Methods
 	public void addExp(int addedExp)
 	{
@@ -211,7 +210,7 @@ public class PlayerActor extends Actor
 		{
 			System.out.println("Which Boots do you want to equip?");
 		}
-		
+
 		//initializes array to hold choices
 		int[] indexRepresentedByChoice= new int[itemSet.length];
 		for(int i=0;i<itemSet.length;i++)
@@ -229,11 +228,11 @@ public class PlayerActor extends Actor
 			}
 		}
 		System.out.println((choices+1) + ") Leave");
-		
+
 		//get input from user
 		select=myScanner.nextInt();
 		System.out.println("choices = " + choices);//debugging
-		
+
 		//make decision based on input
 		if(select<1||select>choices)
 		{
@@ -277,4 +276,3 @@ public class PlayerActor extends Actor
 		}
 	}
 }
-

@@ -1,6 +1,5 @@
-package ver0;
 import java.util.Scanner;
-public class main 
+public class main
 {
 	static Scanner myScanner = new Scanner(System.in);
 	static int select;
@@ -8,7 +7,7 @@ public class main
 	{
 		//gets all skills and prepares them for use in main
 		Skill[] skillSet = Skill.getSkills();
-		
+
 		//gets all items and prepares them for use in main
 		Item[] itemSet = Item.getAllItems();
 
@@ -20,7 +19,7 @@ public class main
 		//System.out.println("Number of Items: " + Item.getNumTypesOfItem());
 		//System.out.println("Number of Skills: " + Skill.getNumOfSkillsTotal());
 		//System.out.println("Number of Enemies: " + EnemyActor.m_numOfEnemies);
-		
+
 		/*boolean exit = false;
 
 		EnemyActor[] enemySet = EnemyActor.getEnemies();
@@ -61,21 +60,21 @@ public class main
 		EnemyActor a2=new EnemyActor(1);
 
 
-		 * 
+		/*
 		Actor a1=new Actor();
 		Actor a2=new Actor();
 
 		Battle battle=new Battle();
-		
+
 		Item basicsword=new Item(1);
 		a1.equipSword(basicsword);
-		
+
 		a1.setName("Jeff");
 
 		//a2.setName("Bob");
 		//System.out.println("Jeff:"+a1.getCurHp()+" Bob: "+a2.getCurHp());
 		//System.out.println(a2.getDefenseFighter());
-				
+
 		battle.actorBattle(a1,a2);
 		//System.out.println("Jeff:"+a1.getCurHp()+" Bob: "+a2.getCurHp());
 		//battle.printSkillsAvailable(a1);
@@ -84,22 +83,22 @@ public class main
 		battle.actorBattle(a1,a2);
 		*/
 
-		
-		
+
+
 		System.out.println("Number of Items: " + Item.getNumTypesOfItem());
 		System.out.println("Number of Skills: " + Skill.getNumOfSkillsTotal());
 		System.out.println("Number of Enemies: " + EnemyActor.m_numOfEnemies);
-		
+
 		/*
 		 * Battle Testing:
-		 * 
+		 *
 		Actor a1=new Actor();
 		Actor a2=new Actor();
 		Battle battle=new Battle();
-		
+
 		Item basicsword=new Item(1);
 		a1.EquipSword(basicsword);
-		
+
 		a1.setName("Jeff");
 		a2.setName("Bob");
 		battle.actorBattle(a1,a2);
@@ -108,7 +107,7 @@ public class main
 		boolean exit = false;
 		while(!exit)
 		{
-			System.out.println("Welcome To GenericRPG! What would you like to do?\n1) developer options 2)exit");
+			System.out.println("Welcome To GenericRPG! What would you like to do?\n1) developer options 2)run world 3)exit");
 			select=myScanner.nextInt();
 			if(select==1)
 			{
@@ -134,6 +133,11 @@ public class main
 			}
 			else if(select==2)
 			{
+				WorldDriver wd = new WorldDriver();
+				wd.runWorld();
+			}
+			else if(select==3)
+			{
 				System.out.println("Thank you for playing!");
 				return;
 			}
@@ -145,11 +149,5 @@ public class main
 
 	}
 
-	
-}
-
-	
-}
 
 }
-

@@ -1,5 +1,3 @@
-package ver0;
-
 public class Actor 
 {
 	Item[] itemSet = Item.getAllItems();
@@ -49,19 +47,19 @@ public class Actor
 		m_skillSet=new boolean[Skill.getNumOfSkillsTotal()];
 		for(int i=0; i<Skill.getNumOfSkillsTotal();i++)
 		{
-			m_skillSet[i]=false; 
+			m_skillSet[i]=false;
 		}
 		m_skillSet[0]=true;//sets the basic attack skill to true to ensure that it is avaliable to all
 	}
-	
-	
+
+
 	//Setters and Getters
-	
+
 	public boolean[] getSkillset()
 	{
 		return m_skillSet;
 	}
-	
+
 	public String getName()
 	{
 		return m_name;
@@ -238,7 +236,7 @@ public class Actor
 			System.out.println("Cannot equip that in the Boots slot!");
 		}
 	}
-	
+
 	//Battle Methods
 	public boolean reduceHp(int damage)//returns bool if fatal
 	{
@@ -247,7 +245,7 @@ public class Actor
 		{
 			return false;
 		}
-		else 
+		else
 		{
 			return true;
 		}
@@ -256,11 +254,11 @@ public class Actor
 	{
 		return opponent.reduceHp(this.getAtk());
 	}
-	
+
 	//getters and setters for battle that have the alteration from the items in addition to the basics
 	public int getAttackFighter()
 	{
-		return ((int)((getAtk()+m_equippedSword.getBonusAtk()+m_equippedShield.getBonusAtk()+m_equippedHelmet.getBonusAtk()+m_equippedBoots.getBonusAtk() + m_equippedGauntlets.getBonusAtk())*getAtkModifier()));		
+		return ((int)((getAtk()+m_equippedSword.getBonusAtk()+m_equippedShield.getBonusAtk()+m_equippedHelmet.getBonusAtk()+m_equippedBoots.getBonusAtk() + m_equippedGauntlets.getBonusAtk())*getAtkModifier()));
 	}
 	public int getDefenseFighter()
 	{

@@ -1,12 +1,11 @@
-package ver0;
 import java.util.Scanner;
-public class Shop 
+public class Shop
 {
 	static Scanner myScanner = new Scanner(System.in);
 	static int select;
 	int[] m_inventory=new int[Item.getNumTypesOfItem()];
-	
-	
+
+
 	public Shop(int whichShop)//used in case we make more than one shop
 	{
 		for(int i=0;i<Item.getNumTypesOfItem();i++)
@@ -47,7 +46,7 @@ public class Shop
 			{
 				System.out.println("Sorry we didn't understand your input, please enter a 1 a 2 or a 3");
 			}
-		}	
+		}
 	}
 	public void displayBuyMenu(PlayerActor character)
 	{
@@ -116,7 +115,7 @@ public class Shop
 			}
 			else if(indexRepresentedByChoice[select]==-1)
 			{
-				
+
 			}
 		}
 	}
@@ -209,7 +208,7 @@ public class Shop
 		else
 		{
 			System.out.println("Sorry, you don't have enough money!");
-			
+
 		}
 	}
 }
